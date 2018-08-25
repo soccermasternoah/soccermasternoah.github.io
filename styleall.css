@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+body {
+	background: url(AdobeStock_134049801.jpeg) no-repeat center fixed;
+	background-size: cover;
+  	margin: 0;
+}
+
+
+	.rain {
+		height: 100vh;
+		background: url(rain.png);
+		animation: rain .3s linear infinite;
+	}
+	.rain:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		opacity: 0;
+	}
+	@keyframes rain {
+		0% {
+			background-position: 0% 0%;
+		}
+		100% {
+			background-position: 20% 100%;
+		}
+	}
+
+
+	.header {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+
+		/* Style the top navigation bar */
+		.topnav {
+		    overflow: hidden;
+		    font-size: 3vw;
+		}
+		/* Style the topnav links */
+		.topnav a {
+		    float: left;
+		    display: block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		/* Change color on hover */
+		.topnav a:hover {
+		    background-color: rgb(255, 204, 88);
+		    color: black;
+		}
+
+
+			.page a {
+				border-bottom: solid rgb(255, 180, 170);
+			}
+
+
+		h1 {
+			font-family: cursive;
+			font-size: 8vw;
+			font-weight: bold;
+			color: white;
+			text-align: center;
+
+		}
+
+
+
+
+
+

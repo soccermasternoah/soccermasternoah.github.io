@@ -128,25 +128,26 @@ body {
 }
 
 
-.logo {
-	background-image: url(WW.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-	height: 15vw; width: 15vw;
+.name {
+	background-image: url(WashingWizards.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+	height: 20vw; width: 20vw;
 	float: right;
 	position: sticky;
-	top: 0;
+	top: 10px;
 	
 }
 
-.name {
-	background-image: url(WashingWizards.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-	height: 60vw; width: 60vw;
-	position: absolute;
-	top: 10vw;
-	left: 25%;
+.logo {
+	background-image: url(WW.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20vw; width: 20vw;
+  float: left;
+/*	position: absolute;*/
+/*	top: 10vw;
+	left: 25%;*/
 }
 
 
@@ -156,13 +157,13 @@ p {
 }
 
 
-/*h1 {
+h1 {
 	font-family: cursive;
 	font-size: 8vw;
 	font-weight: bold;
 	color: white;
 	text-align: center;
-}*/
+}
 
 
 

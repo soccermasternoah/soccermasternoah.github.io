@@ -1,31 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-body {
-  	margin: 0;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	font-size: 3vw;
-}
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-/* Change color on hover */
-.topnav a:hover {
-	background-color: rgb(253, 246, 104);
-	color: black;
-}
-
+/*animations*/
 
 @-webkit-keyframes bounceIn {
   from,
@@ -122,49 +101,216 @@ body {
   animation-name: bounceIn;
 }
 
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 
-.page a {
-	border-bottom: solid rgb(195, 21, 38);
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse:hover {
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+}
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada:hover {
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-name: tada;
+	animation-name: tada;
+	cursor: pointer;
+	opacity: 1;
 }
 
 
-.name {
-	background-image: url(WashingWizards.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-	height: 20vw; width: 20vw;
-	float: right;
-	position: sticky;
-	top: 10px;
-	
+
+.sidebar {
+	float: left;
+	border: solid green;
+}
+
+.openNav {
+	padding: 5%;
+	float: left;
+	height: 10vw;
+	width: 10vw;
+	background: url(hamburger.jpg) no-repeat center;
+	background-size: cover;
+	border: none;
+}
+
+.openNav:hover {
+	cursor: pointer;
+}
+
+
+.animateLeft {
+	position:relative;
+	animation:animateleft 0.4s;
+}
+@keyframes animateleft {
+	from {
+		left:-300px;
+		opacity:0;
+	} to {
+		left:0;
+		opacity:1;
+	}
+}
+
+/* Nav button toggle*/
+.mainON {
+	margin-left: 25%;
+	margin-top: 0;
+}
+
+.sidebar {
+	display: none;
+}
+
+/* Nav button toggle*/
+.sidebarON {
+	width: 25%;
+	display: inline-block;
+}
+
+/* Nav button toggle*/
+.openNavON {
+	display: none;
+}
+
+
+.mainTitle {
+	padding-left: 3%;
+	padding-right: 1%;
 }
 
 .logo {
-	background-image: url(WW.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 20vw; width: 20vw;
-  float: left;
-/*	position: absolute;*/
-/*	top: 10vw;
-	left: 25%;*/
+	background: url(headers/WW.png) no-repeat center;
+	background-size: cover;
+	padding: 5%;
+	float: right;
+	height: 10vw;
+	width: 10vw;
 }
 
-
-p {
-	padding-top: 40vw;
-	font-size: 50px;
+header {
+	border-bottom: solid 3px black;
 }
 
-
-h1 {
-	font-family: cursive;
-	font-size: 8vw;
-	font-weight: bold;
-	color: white;
-	text-align: center;
+.carDetailing {
+	float: left;
+	border: solid 2px black;
+	width: 45%;
+	margin-left: 3.33%;
 }
 
+.windowCleaning {
+	float: right;
+	border: solid 2px black;
+	width: 45%;
+	margin-right: 3.33%;
+}
+
+.fade {
+	opacity: .3;
+	padding: 5%;
+}
 
 
 

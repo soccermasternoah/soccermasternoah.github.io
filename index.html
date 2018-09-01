@@ -4,6 +4,8 @@
 	<title>Washing Wizards</title>
 	<link rel="stylesheet" type="text/css" href="styleall.css">
 	<link rel="stylesheet" type="text/css" href="styleindex.css">
+	<!-- Makes it fit screen -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
@@ -12,24 +14,45 @@
 	<link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#c31526">
 	<meta name="msapplication-TileColor" content="#ffc40d">
 	<meta name="theme-color" content="#ffffff">
-
-<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 </head>
+
 <body>
-
-		<div class="topnav">
-			<div class="page">
-				<a class="bounceIn" href="index.html">Home</a>
-			</div>
-			<a class="bounceIn" href="schedule.html">Schedule</a>
-			<a class="bounceIn" href="prices.html">Prices</a>
-			<a class="bounceIn" href="aboutus.html">About us</a>
-		</div>
-
-		<div class="name"></div>
+	
+	<div class="sidebar animateLeft">
+			<button class="closeNav" onclick="toggleOpen()">Close &times;</button>
+	  	<a href="#" class="sideLink">Sign in / Sign up</a>
+	  	<a href="#" class="sideLink">Window Cleainng</a>
+	  	<a href="#" class="sideLink">Car detailing</a>
+	</div>
 
 
+	<div class="main">
 
+		<header>
+			
+			
+			<button class="openNav" onclick="toggleOpen()"></button>
+			<img class="mainTitle" src="headers/NameLong.png" height="auto" width="80%">
+			<dev class="logo"></dev>
+
+			
+  		</header>
+  		<!-- break -->
+  		<br>
+
+  		<div class="carDetailing">
+  			<img class="title" src="headers/CarDetailing.png" height="auto" width="100%">
+  			<img class="fade tada" src="AdobeStock_135601700.jpeg" height="auto" width="100%">
+  		</div>
+
+  		<div class="windowCleaning">
+  			<img class="title" src="headers/WindowCleaning.png" height="auto" width="100%">
+ 			<img class="fade tada" src="AdobeStock_67867303.jpeg" height="auto" width="100%">
+  		</div>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
 
 
 </body>
